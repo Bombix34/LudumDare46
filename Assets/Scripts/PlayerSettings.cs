@@ -23,6 +23,7 @@ public class PlayerSettings : ScriptableObject
 
 
     [Header("Dash Settings")]
+    public bool IsDashOnVision = false;
     public float dashSpeed = 1f;
     public float dashDuration = 0.3f;
     public int dashNumber = 1;

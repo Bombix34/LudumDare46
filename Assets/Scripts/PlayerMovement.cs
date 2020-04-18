@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private CharacterController controller;
+    private MouseLook vision;
     [SerializeField]
     private PlayerSettings settings;
 
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         controller = this.GetComponent<CharacterController>();
+        vision = this.GetComponentInChildren<MouseLook>();
     }
 
     private void Update()
@@ -56,12 +58,19 @@ public class PlayerMovement : MonoBehaviour
         }
         if (IsDashing)
         {
-            move = (transform.right * lastMovementInput.x + transform.forward * lastMovementInput.y)* settings.dashSpeed;
+            if(!settings.IsDashOnVision)
+                move = (transform.right * lastMovementInput.x + transform.forward * lastMovementInput.y)* settings.dashSpeed;
+            else
+                move = vision.ViewForward * settings.dashSpeed;
             chronoDash -= Time.deltaTime;
             if(chronoDash<=0)
             {
                 IsDashing = false;
             }
+        }
+        else
+        {
+            move *= settings.speed;
         }
 
         if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber)
@@ -76,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
         {
             move *= settings.airControl;
         }
-        controller.Move(move * settings.speed * Time.deltaTime);
+        controller.Move(move * Time.deltaTime);
 
         Vector3 velocityOnJump = Vector3.zero;
         float curGravity =Input.GetButton("Jump") ? settings.gravity*0.8f : settings.gravity;

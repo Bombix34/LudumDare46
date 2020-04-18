@@ -24,5 +24,11 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+        Debug.DrawRay(this.transform.position,transform.forward*5f);
+    }
+
+    public Vector3 ViewForward
+    {
+        get => transform.forward;
     }
 }

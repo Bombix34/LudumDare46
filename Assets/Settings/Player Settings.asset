@@ -19,10 +19,11 @@ MonoBehaviour:
   airControl: 0.8
   multipleJumpNumber: 1
   multipleJumpHeightRatio: 0.5
-  dashSpeed: 10
+  IsDashOnVision: 0
+  dashSpeed: 100
   dashDuration: 0.1
   dashNumber: 1
   dashFOV: 75
-  dashFOVDecreaseSpeed: 150
+  dashFOVDecreaseSpeed: 200
   dashVignette: 0.555
   dashVignetteDecreaseSpeed: 2
