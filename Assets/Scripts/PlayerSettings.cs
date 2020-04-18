@@ -26,6 +26,9 @@ public class PlayerSettings : ScriptableObject
     public float dashSpeed = 1f;
     public float dashDuration = 0.3f;
     public int dashNumber = 1;
+
+    [Header("Dash FX")]
+
     public int dashFOV = 80;
     public float dashFOVDecreaseSpeed = 150f;
     [Range(0f, 1f)]
