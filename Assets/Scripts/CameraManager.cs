@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class CameraManager : MonoBehaviour
 {
     private Camera cam;
 
+    private Vignette vignetteLayer;
+    private PostProcessVolume volume;
+
     private void Awake()
     {
         cam = Camera.main;
+        volume = GetComponent<PostProcessVolume>();
     }
 
     public void ApplyFOVEffect(float newFOVSize)

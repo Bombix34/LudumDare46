@@ -876,6 +876,19 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1101135129, guid: 5c3b9bf4f61fdd144b61b765379215e2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101135129, guid: 5c3b9bf4f61fdd144b61b765379215e2, type: 3}
+      propertyPath: volumeLayer.m_Bits
+      value: 822
+      objectReference: {fileID: 0}
+    - target: {fileID: 1974961528533449241, guid: 5c3b9bf4f61fdd144b61b765379215e2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1974961528938438748, guid: 5c3b9bf4f61fdd144b61b765379215e2,
         type: 3}
       propertyPath: m_Name
