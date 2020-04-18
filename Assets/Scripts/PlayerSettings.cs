@@ -20,4 +20,10 @@ public class PlayerSettings : ScriptableObject
     public int multipleJumpNumber = 1;
     [Range(0f, 1f)]
     public float multipleJumpHeightRatio=0.6f;
+
+
+    [Header("Dash Settings")]
+    public float dashSpeed = 1f;
+    public float dashDuration = 0.3f;
+    public int dashNumber = 1;
 }
