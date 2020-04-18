@@ -78,37 +78,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
-    direction: {x: 0.9583485, y: 1, z: 0.25}
+    direction: {x: 0.9852613, y: 1, z: 0.29130322}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.281081, y: 0.281081}
+    scale: {x: 0.50240916, y: 0.50240916}
     roll: 0
   - position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
     direction: {x: 0.27885437, y: 0.7987348, z: 0.205123}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.12756118, y: 0.12756118}
+    scale: {x: 0.4808243, y: 0.4808243}
     roll: 0
   - position: {x: 0.32932353, y: 1.5627818, z: 0.61059666}
     direction: {x: 0.41009593, y: 1.8, z: 0.71581763}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: -0.08645952, y: -0.08645952}
+    scale: {x: 0.45409158, y: 0.45409158}
     roll: 0
   - position: {x: 0.4100964, y: 2.175, z: 0.7202979}
-    direction: {x: 0.42292523, y: 2.412218, z: 0.75486016}
+    direction: {x: 0.40993583, y: 2.412218, z: 0.7212259}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: -0.21891901, y: -0.21891901}
+    scale: {x: 0.43754646, y: 0.43754646}
     roll: 0
   curves:
   - n1:
       position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
-      direction: {x: 0.9583485, y: 1, z: 0.25}
+      direction: {x: 0.9852613, y: 1, z: 0.29130322}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.281081, y: 0.281081}
+      scale: {x: 0.50240916, y: 0.50240916}
       roll: 0
     n2:
       position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
       direction: {x: 0.27885437, y: 0.7987348, z: 0.205123}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.12756118, y: 0.12756118}
+      scale: {x: 0.4808243, y: 0.4808243}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -117,13 +117,13 @@ MonoBehaviour:
       position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
       direction: {x: 0.27885437, y: 0.7987348, z: 0.205123}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.12756118, y: 0.12756118}
+      scale: {x: 0.4808243, y: 0.4808243}
       roll: 0
     n2:
       position: {x: 0.32932353, y: 1.5627818, z: 0.61059666}
       direction: {x: 0.41009593, y: 1.8, z: 0.71581763}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: -0.08645952, y: -0.08645952}
+      scale: {x: 0.45409158, y: 0.45409158}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -132,18 +132,18 @@ MonoBehaviour:
       position: {x: 0.32932353, y: 1.5627818, z: 0.61059666}
       direction: {x: 0.41009593, y: 1.8, z: 0.71581763}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: -0.08645952, y: -0.08645952}
+      scale: {x: 0.45409158, y: 0.45409158}
       roll: 0
     n2:
       position: {x: 0.4100964, y: 2.175, z: 0.7202979}
-      direction: {x: 0.42292523, y: 2.412218, z: 0.75486016}
+      direction: {x: 0.40993583, y: 2.412218, z: 0.7212259}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: -0.21891901, y: -0.21891901}
+      scale: {x: 0.43754646, y: 0.43754646}
       roll: 0
     Changed:
       m_PersistentCalls:
         m_Calls: []
-  Length: 2.3910415
+  Length: 2.4051464
   isLoop: 0
   CurveChanged:
     m_PersistentCalls:
