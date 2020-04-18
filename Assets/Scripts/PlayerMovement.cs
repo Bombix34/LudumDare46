@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask groundMask;
     public bool IsGrounded { get; set; }
+    private int curJumpOnAir = 0;
 
     private void Awake()
     {
@@ -29,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
+        if(IsGrounded)
+        {
+            curJumpOnAir = 0;
+        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -40,11 +45,21 @@ public class PlayerMovement : MonoBehaviour
         }
         controller.Move(move * settings.speed * Time.deltaTime);
 
+        Vector3 velocityOnJump = Vector3.zero;
         if(Input.GetButtonDown("Jump") && IsGrounded)
         {
+            velocityOnJump = velocity;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * settings.gravity);
         }
-
+        else if(Input.GetButtonDown("Jump")&&curJumpOnAir<settings.multipleJumpNumber)
+        {
+            curJumpOnAir++;
+            velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * settings.gravity);
+        }
+        if(!IsGrounded&&velocityOnJump!=Vector3.zero)
+        {
+            velocity += velocityOnJump;
+        }
         velocity.y += settings.gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);

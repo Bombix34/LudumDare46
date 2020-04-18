@@ -16,4 +16,6 @@ public class PlayerSettings : ScriptableObject
     public float jumpHeight = 1f;
     [Range(0f,1f)]
     public float airControl = 1f;
+
+    public int multipleJumpNumber = 1;
 }
