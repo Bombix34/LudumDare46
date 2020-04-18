@@ -21,6 +21,9 @@ public class PlayerSettings : ScriptableObject
     [Range(0f, 1f)]
     public float multipleJumpHeightRatio=0.6f;
 
+    [Range(0f, 1f)]
+    public float coyoteTime = 0.2f;
+
 
     [Header("Dash Settings")]
     public bool IsDashOnVision = false;

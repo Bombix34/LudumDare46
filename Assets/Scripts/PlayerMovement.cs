@@ -9,14 +9,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private PlayerSettings settings;
 
-    Vector3 velocity;
+    private Vector3 velocity;
 
     [SerializeField]
     private Transform groundCheck;
     private float groundDistance = 0.4f;
     [SerializeField]
     private LayerMask groundMask;
-    public bool IsGrounded { get; set; }
+    public bool IsGrounded { get; set; } 
     public bool IsDashing { get; set; } = false;
     private int curJumpOnAir = 0;
     private int curDashOnAir = 0;
@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     private float chronoDash;
 
     private Vector2 lastMovementInput;
+
+    private float chronoSinceNotGrounded = 0f;
 
     private void Awake()
     {
@@ -44,6 +46,11 @@ public class PlayerMovement : MonoBehaviour
         {
             curJumpOnAir = 0;
             curDashOnAir = 0;
+            chronoSinceNotGrounded = 0;
+        }
+        else
+        {
+            chronoSinceNotGrounded += Time.deltaTime;
         }
 
         float x = Input.GetAxis("Horizontal");
@@ -89,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 velocityOnJump = Vector3.zero;
         float curGravity =Input.GetButton("Jump") ? settings.gravity*0.8f : settings.gravity;
-        if(Input.GetButtonDown("Jump") && IsGrounded)
+        if(Input.GetButtonDown("Jump") && (IsGrounded ||chronoSinceNotGrounded<settings.coyoteTime))
         {
             //first jump
             velocityOnJump = velocity;
@@ -108,6 +115,6 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += curGravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-
     }
+
 }

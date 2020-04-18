@@ -19,7 +19,8 @@ MonoBehaviour:
   airControl: 0.8
   multipleJumpNumber: 1
   multipleJumpHeightRatio: 0.5
-  IsDashOnVision: 0
+  coyoteTime: 0.2
+  IsDashOnVision: 1
   dashSpeed: 100
   dashDuration: 0.1
   dashNumber: 1
