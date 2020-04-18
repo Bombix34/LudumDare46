@@ -32,12 +32,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        /*
+        
         if(IsGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-        */
+        
         if(IsGrounded)
         {
             curJumpOnAir = 0;

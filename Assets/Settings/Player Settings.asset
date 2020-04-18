@@ -22,4 +22,4 @@ MonoBehaviour:
   dashSpeed: 5
   dashDuration: 0.2
   dashNumber: 1
-  dashFOV: 110
+  dashFOV: 75
