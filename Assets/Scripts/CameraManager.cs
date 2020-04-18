@@ -14,14 +14,20 @@ public class CameraManager : MonoBehaviour
     {
         cam = Camera.main;
         volume = GetComponent<PostProcessVolume>();
+        volume.profile.TryGetSettings(out vignetteLayer);
     }
 
-    public void ApplyFOVEffect(float newFOVSize)
+    public void ApplyFOVEffect(float newFOVSize, float decreaseSpeed)
     {
-        StartCoroutine(FOVEffect(newFOVSize));
+        StartCoroutine(FOVEffect(newFOVSize,decreaseSpeed));
     }
 
-    private IEnumerator FOVEffect(float newFOVSize)
+    public void ApplyVignetteEffect(float newVignetteVal, float decreaseSpeed)
+    {
+        StartCoroutine(VignetteEffect(newVignetteVal, decreaseSpeed));
+    }
+
+    private IEnumerator FOVEffect(float newFOVSize, float decreaseSpeed)
     {
         float baseFOV = cam.fieldOfView;
         while(cam.fieldOfView<newFOVSize)
@@ -32,8 +38,25 @@ public class CameraManager : MonoBehaviour
         cam.fieldOfView = newFOVSize;
         while(cam.fieldOfView>baseFOV)
         {
-            cam.fieldOfView -= (Time.deltaTime*100f);
+            cam.fieldOfView -= (Time.deltaTime*decreaseSpeed);
             yield return null;
         }
+    }
+
+    private IEnumerator VignetteEffect(float newVignetteVal, float decreaseSpeed)
+    {
+        vignetteLayer.enabled.value = true;
+        while(vignetteLayer.intensity.value<newVignetteVal)
+        {
+            vignetteLayer.intensity.value += (Time.deltaTime * 5f);
+            yield return null;
+        }
+        vignetteLayer.intensity.value = newVignetteVal;
+        while(vignetteLayer.intensity.value>0)
+        {
+            vignetteLayer.intensity.value -= (Time.deltaTime * decreaseSpeed);
+            yield return null;
+        }
+        vignetteLayer.enabled.value = false;
     }
 }
