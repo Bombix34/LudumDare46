@@ -1,0 +1,261 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4454945703248893318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6172286058588402008}
+  - component: {fileID: 1881890770931238214}
+  - component: {fileID: 297822770469191007}
+  m_Layer: 0
+  m_Name: TroncSpline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6172286058588402008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454945703248893318}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_Children:
+  - {fileID: 5506129414595903641}
+  m_Father: {fileID: 5035007828022911856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1881890770931238214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454945703248893318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a85c5879d519aa4ab2ebbf42591149a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodes:
+  - position: {x: 1.029355, y: -0.4466412, z: 0.29244265}
+    direction: {x: 1.0289307, y: 0.1696198, z: 0.29130322}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 0.5170367, y: 0.5170367}
+    roll: 0
+  - position: {x: 1.084314, y: -0.25767303, z: -0.27476114}
+    direction: {x: 1.1804109, y: -0.30631375, z: -0.38365102}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 0.4725559, y: 0.4725559}
+    roll: 0
+  - position: {x: 1.6049707, y: -0.21471334, z: -0.2483412}
+    direction: {x: 1.6906325, y: -0.18968463, z: -0.21144706}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 0.45576125, y: 0.45576125}
+    roll: 0
+  - position: {x: 1.6284417, y: 0.2035873, z: 0.35227096}
+    direction: {x: 1.6282812, y: 0.6151669, z: 0.353199}
+    up: {x: 0, y: 1, z: 0}
+    scale: {x: 0.4378178, y: 0.4378178}
+    roll: 0
+  curves:
+  - n1:
+      position: {x: 1.029355, y: -0.4466412, z: 0.29244265}
+      direction: {x: 1.0289307, y: 0.1696198, z: 0.29130322}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.5170367, y: 0.5170367}
+      roll: 0
+    n2:
+      position: {x: 1.084314, y: -0.25767303, z: -0.27476114}
+      direction: {x: 1.1804109, y: -0.30631375, z: -0.38365102}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.4725559, y: 0.4725559}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 1.084314, y: -0.25767303, z: -0.27476114}
+      direction: {x: 1.1804109, y: -0.30631375, z: -0.38365102}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.4725559, y: 0.4725559}
+      roll: 0
+    n2:
+      position: {x: 1.6049707, y: -0.21471334, z: -0.2483412}
+      direction: {x: 1.6906325, y: -0.18968463, z: -0.21144706}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.45576125, y: 0.45576125}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  - n1:
+      position: {x: 1.6049707, y: -0.21471334, z: -0.2483412}
+      direction: {x: 1.6906325, y: -0.18968463, z: -0.21144706}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.45576125, y: 0.45576125}
+      roll: 0
+    n2:
+      position: {x: 1.6284417, y: 0.2035873, z: 0.35227096}
+      direction: {x: 1.6282812, y: 0.6151669, z: 0.353199}
+      up: {x: 0, y: 1, z: 0}
+      scale: {x: 0.4378178, y: 0.4378178}
+      roll: 0
+    Changed:
+      m_PersistentCalls:
+        m_Calls: []
+  Length: 2.239384
+  isLoop: 0
+  CurveChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &297822770469191007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4454945703248893318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c858511a9792ce4aa6f2ece20f6a3f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 4300000, guid: 500594a39d643774c8e028335ee33da7, type: 3}
+  material: {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  rotation: {x: 0, y: 90, z: 0}
+  scale: {x: 0.3, y: 0.3, z: 0.3}
+  startScale: 0.5
+  DurationInSecond: 3
+  growAfterSizeSpeed: 1.5
+--- !u!1 &5419367615824462590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5506129414595903641}
+  - component: {fileID: 3220793737034749125}
+  - component: {fileID: 3977181566620832046}
+  - component: {fileID: 5030962729525953144}
+  m_Layer: 0
+  m_Name: generated by TroncGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5506129414595903641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419367615824462590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6172286058588402008}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3220793737034749125
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419367615824462590}
+  m_Mesh: {fileID: 0}
+--- !u!23 &3977181566620832046
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419367615824462590}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!114 &5030962729525953144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5419367615824462590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8cda9ed2ad6a8b4781166236afc26b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &9221542904087768202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5035007828022911856}
+  m_Layer: 0
+  m_Name: TroncModule (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5035007828022911856
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9221542904087768202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6172286058588402008}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
