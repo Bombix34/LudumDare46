@@ -29,9 +29,15 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = -2f;
         }
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
         Vector3 move = (transform.right * x + transform.forward * z);
+        if(!IsGrounded)
+        {
+            move *= settings.airControl;
+        }
         controller.Move(move * settings.speed * Time.deltaTime);
 
         if(Input.GetButtonDown("Jump") && IsGrounded)
