@@ -23,3 +23,6 @@ MonoBehaviour:
   dashDuration: 0.2
   dashNumber: 1
   dashFOV: 75
+  dashFOVDecreaseSpeed: 150
+  dashVignette: 0.555
+  dashVignetteDecreaseSpeed: 2

@@ -27,4 +27,8 @@ public class PlayerSettings : ScriptableObject
     public float dashDuration = 0.3f;
     public int dashNumber = 1;
     public int dashFOV = 80;
+    public float dashFOVDecreaseSpeed = 150f;
+    [Range(0f, 1f)]
+    public float dashVignette;
+    public float dashVignetteDecreaseSpeed = 2f;
 }

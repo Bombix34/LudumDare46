@@ -67,7 +67,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber)
         {
             IsDashing = true;
-            Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV);
+            Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV, settings.dashFOVDecreaseSpeed);
+            Camera.main.GetComponent<CameraManager>().ApplyVignetteEffect(settings.dashVignette, settings.dashVignetteDecreaseSpeed);
             curDashOnAir++;
             chronoDash = settings.dashDuration;
         }
