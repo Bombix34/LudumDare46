@@ -13,12 +13,17 @@ MonoBehaviour:
   m_Name: Player Settings
   m_EditorClassIdentifier: 
   mouseSensitivity: 120
-  speed: 10
-  gravity: -11.772
+  speed: 12
+  gravity: -25
   jumpHeight: 4
-  airControl: 0.6
+  airControl: 0.8
   multipleJumpNumber: 1
-  multipleJumpHeightRatio: 0.7
-  dashSpeed: 10
-  dashDuration: 0.2
+  multipleJumpHeightRatio: 0.5
+  IsDashOnVision: 0
+  dashSpeed: 100
+  dashDuration: 0.1
   dashNumber: 1
+  dashFOV: 75
+  dashFOVDecreaseSpeed: 200
+  dashVignette: 0.555
+  dashVignetteDecreaseSpeed: 2
