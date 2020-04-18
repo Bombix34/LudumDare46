@@ -29,9 +29,7 @@ public class DelayedAppear : MonoBehaviour
         else if(!IsShowed)
         {
             IsShowed = true;
-            this.transform.DOScaleX(finalSize.x, appearSpeed);
-            this.transform.DOScaleY(finalSize.y, appearSpeed);
-            this.transform.DOScaleZ(finalSize.z, appearSpeed);
+            StartCoroutine(StartAnimation());
         }
     }
 
@@ -40,7 +38,7 @@ public class DelayedAppear : MonoBehaviour
         this.transform.DOScaleX(finalSize.x*1.2f, appearSpeed * 0.8f);
         this.transform.DOScaleY(finalSize.y * 1.2f, appearSpeed * 0.8f);
         this.transform.DOScaleZ(finalSize.z * 1.2f, appearSpeed * 0.8f);
-        yield return new WaitForSeconds(appearSpeed * 0.2f);
+        yield return new WaitForSeconds(appearSpeed * 0.8f);
         this.transform.DOScaleX(finalSize.x, appearSpeed * 0.2f);
         this.transform.DOScaleY(finalSize.y, appearSpeed * 0.2f);
         this.transform.DOScaleZ(finalSize.z, appearSpeed * 0.2f);
