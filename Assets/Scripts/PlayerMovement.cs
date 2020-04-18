@@ -46,21 +46,24 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * settings.speed * Time.deltaTime);
 
         Vector3 velocityOnJump = Vector3.zero;
+        float curGravity =Input.GetButton("Jump") ? settings.gravity*0.8f : settings.gravity;
         if(Input.GetButtonDown("Jump") && IsGrounded)
         {
+            //first jump
             velocityOnJump = velocity;
-            velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * settings.gravity);
+            velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * curGravity);
         }
         else if(Input.GetButtonDown("Jump")&&curJumpOnAir<settings.multipleJumpNumber)
         {
+            //multiple jump
             curJumpOnAir++;
-            velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * settings.gravity);
+            velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * (curGravity * settings.multipleJumpHeightRatio));
         }
         if(!IsGrounded&&velocityOnJump!=Vector3.zero)
         {
             velocity += velocityOnJump;
         }
-        velocity.y += settings.gravity * Time.deltaTime;
+        velocity.y += curGravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
 

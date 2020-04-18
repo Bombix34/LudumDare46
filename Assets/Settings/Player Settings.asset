@@ -15,6 +15,7 @@ MonoBehaviour:
   mouseSensitivity: 120
   speed: 10
   gravity: -11.772
-  jumpHeight: 3
+  jumpHeight: 4
   airControl: 0.6
   multipleJumpNumber: 1
+  multipleJumpHeightRatio: 0.7
