@@ -26,4 +26,5 @@ public class PlayerSettings : ScriptableObject
     public float dashSpeed = 1f;
     public float dashDuration = 0.3f;
     public int dashNumber = 1;
+    public int dashFOV = 80;
 }

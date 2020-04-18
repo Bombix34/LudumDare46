@@ -32,10 +32,12 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        /*
         if(IsGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
+        */
         if(IsGrounded)
         {
             curJumpOnAir = 0;
@@ -65,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber)
         {
             IsDashing = true;
+            Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV);
             curDashOnAir++;
             chronoDash = settings.dashDuration;
         }
