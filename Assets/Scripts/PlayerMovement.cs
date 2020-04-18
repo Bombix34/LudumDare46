@@ -16,7 +16,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private LayerMask groundMask;
     public bool IsGrounded { get; set; }
+    public bool IsDashing { get; set; } = false;
     private int curJumpOnAir = 0;
+    private int curDashOnAir = 0;
+
+    private float chronoDash;
+
+    private Vector2 lastMovementInput;
 
     private void Awake()
     {
@@ -33,13 +39,36 @@ public class PlayerMovement : MonoBehaviour
         if(IsGrounded)
         {
             curJumpOnAir = 0;
+            curDashOnAir = 0;
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = (transform.right * x + transform.forward * z);
-        if(!IsGrounded)
+        Vector2 dirVector = new Vector2(x, z).normalized;
+        Vector3 move = (transform.right * dirVector.x + transform.forward * dirVector.y);
+
+        if ((dirVector.x>0.1f||dirVector.x<-0.1f) || (dirVector.y>0.1f||dirVector.y<-0.1f) && !IsDashing)
+        {
+            lastMovementInput = dirVector;
+        }
+        if (IsDashing)
+        {
+            move = (transform.right * lastMovementInput.x + transform.forward * lastMovementInput.y)* settings.dashSpeed;
+            chronoDash -= Time.deltaTime;
+            if(chronoDash<=0)
+            {
+                IsDashing = false;
+            }
+        }
+
+        if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber)
+        {
+            IsDashing = true;
+            curDashOnAir++;
+            chronoDash = settings.dashDuration;
+        }
+        if (!IsGrounded && !IsDashing)
         {
             move *= settings.airControl;
         }
@@ -53,13 +82,13 @@ public class PlayerMovement : MonoBehaviour
             velocityOnJump = velocity;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * curGravity);
         }
-        else if(Input.GetButtonDown("Jump")&&curJumpOnAir<settings.multipleJumpNumber)
+        else if(Input.GetButtonDown("Jump") && curJumpOnAir<settings.multipleJumpNumber)
         {
             //multiple jump
             curJumpOnAir++;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * (curGravity * settings.multipleJumpHeightRatio));
         }
-        if(!IsGrounded&&velocityOnJump!=Vector3.zero)
+        if(!IsGrounded && velocityOnJump!=Vector3.zero)
         {
             velocity += velocityOnJump;
         }

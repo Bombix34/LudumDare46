@@ -19,3 +19,6 @@ MonoBehaviour:
   airControl: 0.6
   multipleJumpNumber: 1
   multipleJumpHeightRatio: 0.7
+  dashSpeed: 10
+  dashDuration: 0.2
+  dashNumber: 1
