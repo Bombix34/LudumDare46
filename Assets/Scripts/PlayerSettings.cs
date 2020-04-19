@@ -29,6 +29,7 @@ public class PlayerSettings : ScriptableObject
     public bool IsDashOnVision = false;
     public float dashSpeed = 1f;
     public float dashDuration = 0.3f;
+    public float dashCooldown = 0.1f;
     public int dashNumber = 1;
 
     [Header("Dash FX")]
