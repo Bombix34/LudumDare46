@@ -94,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber && curDashCooldown<=0)
         {
             IsDashing = true;
+            velocity = Vector3.zero;
             curDashCooldown = settings.dashCooldown;
             Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV, settings.dashFOVDecreaseSpeed);
             Camera.main.GetComponent<CameraManager>().ApplyVignetteEffect(settings.dashVignette, settings.dashVignetteDecreaseSpeed);
@@ -111,12 +112,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && (IsGrounded ||chronoSinceNotGrounded<settings.coyoteTime))
         {
             //first jump
+            velocity = Vector3.zero;
             velocityOnJump = velocity;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * curGravity);
         }
         else if(Input.GetButtonDown("Jump") && curJumpOnAir<settings.multipleJumpNumber)
         {
             //multiple jump
+            velocity = Vector3.zero;
             curJumpOnAir++;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * (curGravity * settings.multipleJumpHeightRatio));
         }
@@ -131,7 +134,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform &&IsGrounded)
+        if (hit.gameObject.GetComponent<BouncingPlatform>() != null)
+        {
+            Bounce(hit.gameObject.GetComponent<BouncingPlatform>().BounceDirection);
+            return;
+        }
+        if (hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform && IsGrounded)
         {
             lastPlatform = hit.gameObject;
             deathZone?.SwitchPosition();
@@ -171,5 +179,17 @@ public class PlayerMovement : MonoBehaviour
     {
         get => settings;
     }
+
+    private Vector3 bounceVector;
+    private bool isBouncing = false;
+
+    private float bounceChrono = 0.1f;
+
+    private void Bounce(Vector3 dirVector)
+    {
+        velocity = Vector3.zero;
+        velocity.y += settings.bounceForce;
+    }
+
 
 }
