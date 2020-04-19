@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform)
+        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform &&IsGrounded)
         {
             lastPlatform = hit.gameObject;
             deathZone?.SwitchPosition();
@@ -159,6 +159,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator TeleportEffect(Vector3 position)
     {
         this.GetComponentInChildren<CameraManager>().BloomDieEffect(settings.deathBloomIntensity, settings.deathBloomDuration);
+        deathZone.SwitchPosition();
         yield return new WaitForSeconds(0.3f);
         controller.enabled = false;
         this.transform.position = position;
