@@ -23,6 +23,7 @@ MonoBehaviour:
   IsDashOnVision: 1
   dashSpeed: 100
   dashDuration: 0.1
+  dashCooldown: 0.3
   dashNumber: 1
   dashFOV: 75
   dashFOVDecreaseSpeed: 200
