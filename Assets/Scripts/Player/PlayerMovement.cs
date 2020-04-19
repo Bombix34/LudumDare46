@@ -131,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform)
+        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform &&IsGrounded)
         {
             lastPlatform = hit.gameObject;
             deathZone?.SwitchPosition();
@@ -163,6 +163,7 @@ public class PlayerMovement : MonoBehaviour
         controller.enabled = false;
         this.transform.position = position;
         controller.enabled = true;
+        deathZone.SwitchPosition();
         ResetVelocity();
     }
 
