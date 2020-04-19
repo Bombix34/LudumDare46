@@ -131,7 +131,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform &&IsGrounded)
+        if (hit.gameObject.GetComponent<BouncingPlatform>() != null)
+        {
+            Bounce(hit.gameObject.GetComponent<BouncingPlatform>().BounceDirection);
+            return;
+        }
+        if (hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform && IsGrounded)
         {
             lastPlatform = hit.gameObject;
             deathZone?.SwitchPosition();
@@ -171,5 +176,17 @@ public class PlayerMovement : MonoBehaviour
     {
         get => settings;
     }
+
+    private Vector3 bounceVector;
+    private bool isBouncing = false;
+
+    private float bounceChrono = 0.1f;
+
+    private void Bounce(Vector3 dirVector)
+    {
+        velocity = Vector3.zero;
+        velocity.y += settings.bounceForce;
+    }
+
 
 }

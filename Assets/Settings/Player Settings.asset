@@ -32,3 +32,4 @@ MonoBehaviour:
   deathTriggerZonePositionY: -15
   deathBloomIntensity: 60
   deathBloomDuration: 0.2
+  bounceForce: 30

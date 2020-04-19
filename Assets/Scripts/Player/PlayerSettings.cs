@@ -46,4 +46,8 @@ public class PlayerSettings : ScriptableObject
     public float deathTriggerZonePositionY = -10f;
     public float deathBloomIntensity = 50f;
     public float deathBloomDuration = 0.4f;
+
+
+    [Header("Bounce Settings")]
+    public float bounceForce = 25f;
 }
