@@ -80,7 +80,7 @@ MonoBehaviour:
   - position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
     direction: {x: 0.9583485, y: 1, z: 0.25}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.50770867, y: 0.50770867}
+    scale: {x: 0.50172734, y: 0.50172734}
     roll: 0
   - position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
     direction: {x: 0.27885437, y: 0.7987348, z: 0.205123}
@@ -102,7 +102,7 @@ MonoBehaviour:
       position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
       direction: {x: 0.9583485, y: 1, z: 0.25}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.50770867, y: 0.50770867}
+      scale: {x: 0.50172734, y: 0.50172734}
       roll: 0
     n2:
       position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 4300000, guid: 500594a39d643774c8e028335ee33da7, type: 3}
-  material: {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  material: {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   rotation: {x: 0, y: 90, z: 0}
   scale: {x: 0.3, y: 0.3, z: 0.3}
   startScale: 0.5
@@ -227,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  - {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
