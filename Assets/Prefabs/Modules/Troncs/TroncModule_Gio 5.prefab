@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  - {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,40 +141,40 @@ MonoBehaviour:
   - position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
     direction: {x: 0.9852613, y: 0.6151935, z: 0.31014764}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.5009172, y: 0.5009172}
+    scale: {x: 0.5096227, y: 0.5096227}
     roll: 0
   - position: {x: 0.8910847, y: 0.7220056, z: 0.82626724}
     direction: {x: 0.72831917, y: 0.7987344, z: 1.0310862}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.49166632, y: 0.49166632}
+    scale: {x: 0.48038894, y: 0.48038894}
     roll: 0
   - position: {x: 0.2698574, y: 0.9308126, z: 1.1526796}
     direction: {x: -0.121124506, y: 1.2173703, z: 1.012662}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.48111758, y: 0.48111758}
+    scale: {x: 0.45556536, y: 0.45556536}
     roll: 0
   - position: {x: 0.15847111, y: 1.9146097, z: 0.4044249}
     direction: {x: -0.31707358, y: 2.213082, z: 0.42495942}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.4637339, y: 0.4637339}
+    scale: {x: 0.41465765, y: 0.41465765}
     roll: 0
   - position: {x: -0.06844032, y: 3.0457969, z: 1.751506}
     direction: {x: 0.11595464, y: 4.2188907, z: 1.8347112}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.43751568, y: 0.43751568}
+    scale: {x: 0.35296017, y: 0.35296017}
     roll: 0
   curves:
   - n1:
       position: {x: 0.98568577, y: 0.43299007, z: 0.29244265}
       direction: {x: 0.9852613, y: 0.6151935, z: 0.31014764}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.5009172, y: 0.5009172}
+      scale: {x: 0.5096227, y: 0.5096227}
       roll: 0
     n2:
       position: {x: 0.8910847, y: 0.7220056, z: 0.82626724}
       direction: {x: 0.72831917, y: 0.7987344, z: 1.0310862}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.49166632, y: 0.49166632}
+      scale: {x: 0.48038894, y: 0.48038894}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -183,13 +183,13 @@ MonoBehaviour:
       position: {x: 0.8910847, y: 0.7220056, z: 0.82626724}
       direction: {x: 0.72831917, y: 0.7987344, z: 1.0310862}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.49166632, y: 0.49166632}
+      scale: {x: 0.48038894, y: 0.48038894}
       roll: 0
     n2:
       position: {x: 0.2698574, y: 0.9308126, z: 1.1526796}
       direction: {x: -0.121124506, y: 1.2173703, z: 1.012662}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.48111758, y: 0.48111758}
+      scale: {x: 0.45556536, y: 0.45556536}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -198,13 +198,13 @@ MonoBehaviour:
       position: {x: 0.2698574, y: 0.9308126, z: 1.1526796}
       direction: {x: -0.121124506, y: 1.2173703, z: 1.012662}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.48111758, y: 0.48111758}
+      scale: {x: 0.45556536, y: 0.45556536}
       roll: 0
     n2:
       position: {x: 0.15847111, y: 1.9146097, z: 0.4044249}
       direction: {x: -0.31707358, y: 2.213082, z: 0.42495942}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.4637339, y: 0.4637339}
+      scale: {x: 0.41465765, y: 0.41465765}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -213,13 +213,13 @@ MonoBehaviour:
       position: {x: 0.15847111, y: 1.9146097, z: 0.4044249}
       direction: {x: -0.31707358, y: 2.213082, z: 0.42495942}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.4637339, y: 0.4637339}
+      scale: {x: 0.41465765, y: 0.41465765}
       roll: 0
     n2:
       position: {x: -0.06844032, y: 3.0457969, z: 1.751506}
       direction: {x: 0.11595464, y: 4.2188907, z: 1.8347112}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.43751568, y: 0.43751568}
+      scale: {x: 0.35296017, y: 0.35296017}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 4300000, guid: 500594a39d643774c8e028335ee33da7, type: 3}
-  material: {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  material: {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   rotation: {x: 0, y: 90, z: 0}
   scale: {x: 0.3, y: 0.3, z: 0.3}
   startScale: 0.5
