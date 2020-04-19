@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  - {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -141,30 +141,30 @@ MonoBehaviour:
   - position: {x: 1.1955318, y: 0.43299007, z: -0.0054415464}
     direction: {x: 1.1258984, y: 1, z: -0.029219985}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.5028708, y: 0.5028708}
+    scale: {x: 0.50725156, y: 0.50725156}
     roll: 0
   - position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
     direction: {x: 0.17972898, y: 0.79873466, z: 0.32057583}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.4864837, y: 0.4864837}
+    scale: {x: 0.4864951, y: 0.4864951}
     roll: 0
   - position: {x: 0.41009617, y: 3.9950652, z: 0.72029793}
     direction: {x: 0.4099356, y: 4.2322836, z: 0.721226}
     up: {x: 0, y: 1, z: 0}
-    scale: {x: 0.43751457, y: 0.43751457}
+    scale: {x: 0.43756726, y: 0.43756726}
     roll: 0
   curves:
   - n1:
       position: {x: 1.1955318, y: 0.43299007, z: -0.0054415464}
       direction: {x: 1.1258984, y: 1, z: -0.029219985}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.5028708, y: 0.5028708}
+      scale: {x: 0.50725156, y: 0.50725156}
       roll: 0
     n2:
       position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
       direction: {x: 0.17972898, y: 0.79873466, z: 0.32057583}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.4864837, y: 0.4864837}
+      scale: {x: 0.4864951, y: 0.4864951}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -173,13 +173,13 @@ MonoBehaviour:
       position: {x: 0.52324677, y: 0.72200584, z: 0.18689477}
       direction: {x: 0.17972898, y: 0.79873466, z: 0.32057583}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.4864837, y: 0.4864837}
+      scale: {x: 0.4864951, y: 0.4864951}
       roll: 0
     n2:
       position: {x: 0.41009617, y: 3.9950652, z: 0.72029793}
       direction: {x: 0.4099356, y: 4.2322836, z: 0.721226}
       up: {x: 0, y: 1, z: 0}
-      scale: {x: 0.43751457, y: 0.43751457}
+      scale: {x: 0.43756726, y: 0.43756726}
       roll: 0
     Changed:
       m_PersistentCalls:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 4300000, guid: 500594a39d643774c8e028335ee33da7, type: 3}
-  material: {fileID: 2100000, guid: b8c8701b896a8184e8974775b53a7fd7, type: 2}
+  material: {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   rotation: {x: 0, y: 90, z: 0}
   scale: {x: 0.3, y: 0.3, z: 0.3}
   startScale: 0.5
