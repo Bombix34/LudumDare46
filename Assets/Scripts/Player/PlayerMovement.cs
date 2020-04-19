@@ -94,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber && curDashCooldown<=0)
         {
             IsDashing = true;
+            velocity = Vector3.zero;
             curDashCooldown = settings.dashCooldown;
             Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV, settings.dashFOVDecreaseSpeed);
             Camera.main.GetComponent<CameraManager>().ApplyVignetteEffect(settings.dashVignette, settings.dashVignetteDecreaseSpeed);
@@ -111,12 +112,14 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && (IsGrounded ||chronoSinceNotGrounded<settings.coyoteTime))
         {
             //first jump
+            velocity = Vector3.zero;
             velocityOnJump = velocity;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * curGravity);
         }
         else if(Input.GetButtonDown("Jump") && curJumpOnAir<settings.multipleJumpNumber)
         {
             //multiple jump
+            velocity = Vector3.zero;
             curJumpOnAir++;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * (curGravity * settings.multipleJumpHeightRatio));
         }
