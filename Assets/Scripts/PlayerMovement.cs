@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private int curDashOnAir = 0;
 
     private float chronoDash;
+    private float curDashCooldown = 0f;
 
     private Vector2 lastMovementInput;
 
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        DashCooldown();
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
         if(IsGrounded && velocity.y < 0)
@@ -80,9 +82,10 @@ public class PlayerMovement : MonoBehaviour
             move *= settings.speed;
         }
 
-        if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber)
+        if (Input.GetButtonDown("Fire2") && curDashOnAir < settings.dashNumber && curDashCooldown<=0)
         {
             IsDashing = true;
+            curDashCooldown = settings.dashCooldown;
             Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV, settings.dashFOVDecreaseSpeed);
             Camera.main.GetComponent<CameraManager>().ApplyVignetteEffect(settings.dashVignette, settings.dashVignetteDecreaseSpeed);
             curDashOnAir++;
@@ -115,6 +118,14 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += curGravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void DashCooldown()
+    {
+        if(curDashCooldown>0)
+        {
+            curDashCooldown -= Time.deltaTime;
+        }
     }
 
 }
