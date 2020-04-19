@@ -44,6 +44,7 @@ public class PlayerManager : MonoBehaviour
         {
             //FEED TREE
             FlyDisappearFromHand();
+            GameManager.Instance.FeedTree();
             return true;
         }
         else

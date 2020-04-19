@@ -29,6 +29,7 @@ MonoBehaviour:
   dashFOVDecreaseSpeed: 200
   dashVignette: 0.555
   dashVignetteDecreaseSpeed: 2
+  decrepitTime: 60
   deathTriggerZonePositionY: -25
   deathBloomIntensity: 60
   deathBloomDuration: 0.2
