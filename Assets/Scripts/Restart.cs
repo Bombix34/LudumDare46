@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Restart : MonoBehaviour
 {
-    public GameObject lastCheckpoint;
     public GameObject player;
     // Start is called before the first frame update
     void Start()
@@ -21,8 +20,4 @@ public class Restart : MonoBehaviour
         }
     }
 
-    public void AddCheckpoint(GameObject newCheckpoint)
-    {
-        lastCheckpoint = newCheckpoint;
-    }
 }
