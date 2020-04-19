@@ -39,4 +39,11 @@ public class PlayerSettings : ScriptableObject
     [Range(0f, 1f)]
     public float dashVignette;
     public float dashVignetteDecreaseSpeed = 2f;
+
+
+    [Header("Death Settings")]
+    [Tooltip("La distance en Y de la death zone")]
+    public float deathTriggerZonePositionY = -10f;
+    public float deathBloomIntensity = 50f;
+    public float deathBloomDuration = 0.4f;
 }

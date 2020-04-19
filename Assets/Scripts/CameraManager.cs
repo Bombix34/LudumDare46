@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using DG.Tweening;
 
 public class CameraManager : MonoBehaviour
 {
     private Camera cam;
 
     private Vignette vignetteLayer;
+    private Bloom bloomLayer;
     private PostProcessVolume volume;
 
     private void Awake()
@@ -15,6 +17,7 @@ public class CameraManager : MonoBehaviour
         cam = Camera.main;
         volume = GetComponent<PostProcessVolume>();
         volume.profile.TryGetSettings(out vignetteLayer);
+        volume.profile.TryGetSettings(out bloomLayer);
     }
 
     public void ApplyFOVEffect(float newFOVSize, float decreaseSpeed)
@@ -58,5 +61,17 @@ public class CameraManager : MonoBehaviour
             yield return null;
         }
         vignetteLayer.enabled.value = false;
+    }
+
+    public void BloomDieEffect(float endValue, float duration)
+    {
+        bloomLayer.enabled.value = true;
+        DOTween.To(() => bloomLayer.intensity.value, x => bloomLayer.intensity.value = x, endValue, duration)
+            .OnComplete(ResetBloom);
+    }
+
+    private void ResetBloom()
+    {
+        DOTween.To(() => bloomLayer.intensity.value, x => bloomLayer.intensity.value = x, 0f, 0.3f);
     }
 }
