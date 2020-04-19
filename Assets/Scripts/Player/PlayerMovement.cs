@@ -159,11 +159,11 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator TeleportEffect(Vector3 position)
     {
         this.GetComponentInChildren<CameraManager>().BloomDieEffect(settings.deathBloomIntensity, settings.deathBloomDuration);
-        deathZone.SwitchPosition();
         yield return new WaitForSeconds(0.3f);
         controller.enabled = false;
         this.transform.position = position;
         controller.enabled = true;
+        deathZone.SwitchPosition();
         ResetVelocity();
     }
 
