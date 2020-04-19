@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1974961527932268431}
   - component: {fileID: 1974961527932268400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 1974961528533449237}
   - component: {fileID: 1101135128}
   - component: {fileID: 1101135129}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -165,15 +165,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974961528533449241}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 5b442b424b350524ebf562d12f0488c6, type: 2}
   isGlobal: 1
-  blendDistance: 0
-  weight: 1
+  blendDistance: 3.99
+  weight: 0.7
   priority: 0
 --- !u!114 &1101135129
 MonoBehaviour:
@@ -190,7 +190,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1974961528533449236}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 822
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
   antialiasingMode: 0
@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974961528710947128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.02, z: 0}
+  m_LocalPosition: {x: 0, y: -0.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1974961528938438749}
@@ -276,9 +276,10 @@ GameObject:
   - component: {fileID: 1974961528938438749}
   - component: {fileID: 1974961528938438746}
   - component: {fileID: 1974961528938438747}
+  - component: {fileID: 86150057}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -335,3 +336,16 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!114 &86150057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974961528938438748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17cfbe55b33c8c408512ed2989c15c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curCheckpoint: {fileID: 0}

@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 velocity;
 
+    private DeathTriggerZone deathZone;
+
     [SerializeField]
     private Transform groundCheck;
     private float groundDistance = 0.4f;
@@ -28,10 +30,17 @@ public class PlayerMovement : MonoBehaviour
 
     private float chronoSinceNotGrounded = 0f;
 
+    private GameObject lastPlatform = null;
+
     private void Awake()
     {
         controller = this.GetComponent<CharacterController>();
         vision = this.GetComponentInChildren<MouseLook>();
+    }
+
+    private void Start()
+    {
+        deathZone = DeathTriggerZone.Instance;
     }
 
     private void Update()
@@ -120,12 +129,46 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if(hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform)
+        {
+            lastPlatform = hit.gameObject;
+            deathZone?.SwitchPosition();
+        }
+    }
+
     private void DashCooldown()
     {
         if(curDashCooldown>0)
         {
             curDashCooldown -= Time.deltaTime;
         }
+    }
+
+    public void ResetVelocity()
+    {
+        controller.Move(Vector3.zero);
+    }
+
+    public void TeleportToPosition(Vector3 position)
+    {
+        StartCoroutine(TeleportEffect(position));
+    }
+
+    private IEnumerator TeleportEffect(Vector3 position)
+    {
+        this.GetComponentInChildren<CameraManager>().BloomDieEffect(settings.deathBloomIntensity, settings.deathBloomDuration);
+        yield return new WaitForSeconds(0.3f);
+        controller.enabled = false;
+        this.transform.position = position;
+        controller.enabled = true;
+        ResetVelocity();
+    }
+
+    public PlayerSettings Settings
+    {
+        get => settings;
     }
 
 }
