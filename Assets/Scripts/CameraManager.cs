@@ -44,6 +44,7 @@ public class CameraManager : MonoBehaviour
             cam.fieldOfView -= (Time.deltaTime*decreaseSpeed);
             yield return null;
         }
+        cam.fieldOfView = baseFOV;
     }
 
     private IEnumerator VignetteEffect(float newVignetteVal, float decreaseSpeed)
