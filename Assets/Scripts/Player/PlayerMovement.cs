@@ -167,6 +167,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator TeleportEffect(Vector3 position)
     {
         this.GetComponentInChildren<CameraManager>().BloomDieEffect(settings.deathBloomIntensity, settings.deathBloomDuration);
+        GetComponent<PlayerManager>().FlyDisappearFromHand();
         yield return new WaitForSeconds(0.3f);
         controller.enabled = false;
         this.transform.position = position;
@@ -180,15 +181,12 @@ public class PlayerMovement : MonoBehaviour
         get => settings;
     }
 
-    private Vector3 bounceVector;
-    private bool isBouncing = false;
-
-    private float bounceChrono = 0.1f;
-
     private void Bounce(Vector3 dirVector)
     {
         velocity = Vector3.zero;
         velocity.y += settings.bounceForce;
+        curJumpOnAir = 0;
+        curDashOnAir = 0;
     }
 
 
