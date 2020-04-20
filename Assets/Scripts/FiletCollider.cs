@@ -29,8 +29,15 @@ public class FiletCollider : MonoBehaviour
 
     public void DestroyFly()
     {
-        flyCatchs.Add(curFly);
-        curFly.SetActive(false);
+        GameObject flyToCatch = curFly;
+        flyCatchs.Add(flyToCatch);
+        StartCoroutine(DesactivateFly(flyToCatch));
+    }
+
+    public IEnumerator DesactivateFly(GameObject flyToDesactivate)
+    {
+        yield return new WaitForSeconds(0.2f);
+        flyToDesactivate.SetActive(false);
     }
 
     public void RespawnFly()
