@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace SplineMesh
@@ -15,7 +14,6 @@ namespace SplineMesh
     /// 
     /// This component is only for demo purpose and is not intended to be used as-is.
     /// </summary>
-    [ExecuteInEditMode]
     [RequireComponent(typeof(Spline))]
     public class DelayedSplineGenerator: MonoBehaviour
     {
@@ -41,32 +39,18 @@ namespace SplineMesh
 
         public bool IsEndedGrowing { get; set; } = false;
 
-        private void OnEnable()
+        private void Start()
         {
             rate = 0;
             growAfterSize = 1f;
             delay = MaxDelay;
             IsEndedGrowing = false;
             Init();
-#if UNITY_EDITOR
-            EditorApplication.update += EditorUpdate;
-#endif
         }
 
-        void OnDisable()
-        {
-#if UNITY_EDITOR
-            EditorApplication.update -= EditorUpdate;
-#endif
-        }
-
-        private void OnValidate()
-        {
-            Init();
-        }
 
         bool isStarted = false;
-        void EditorUpdate()
+        void Update()
         {
             if(delay>=0f)
             {

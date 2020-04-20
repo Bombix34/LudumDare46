@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
   m_Name: dash
   m_EditorClassIdentifier: 
-  audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
+  audioMixerGroup: {fileID: 3462626896554441207, guid: 286dbf57ccfa81b499081238b984b43b,
     type: 2}
   loop: 0
   clips:
   - {fileID: 8300000, guid: 30b137d4b2af76a4ba1375fb36e39331, type: 3}
   volume:
-    minValue: 0.42979714
-    maxValue: 0.54738903
+    minValue: 0.5330377
+    maxValue: 0.59327364
   pitch:
     minValue: 0.7831521
     maxValue: 1.0469891

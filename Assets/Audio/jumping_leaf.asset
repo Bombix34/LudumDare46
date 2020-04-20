@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
   m_Name: jumping_leaf
   m_EditorClassIdentifier: 
-  audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
+  audioMixerGroup: {fileID: 3462626896554441207, guid: 286dbf57ccfa81b499081238b984b43b,
     type: 2}
   loop: 0
   clips:
   - {fileID: 8300000, guid: 4f58a52f3d75950448fd1256e193c3fc, type: 3}
   volume:
-    minValue: 0.20241955
-    maxValue: 0.32001126
+    minValue: 0.6727379
+    maxValue: 0.79032964
   pitch:
     minValue: 0.97042525
     maxValue: 1.0392522

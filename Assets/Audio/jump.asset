@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
   m_Name: jump
   m_EditorClassIdentifier: 
-  audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
+  audioMixerGroup: {fileID: 3462626896554441207, guid: 286dbf57ccfa81b499081238b984b43b,
     type: 2}
   loop: 0
   clips:
   - {fileID: 8300000, guid: 2cc45545a08547e47abaadb6eff64794, type: 3}
   volume:
-    minValue: 0.6505033
-    maxValue: 0.73368144
+    minValue: 0.5587338
+    maxValue: 0.6419119
   pitch:
-    minValue: 0.68415827
-    maxValue: 0.7529852
+    minValue: 0.5350329
+    maxValue: 0.86769676

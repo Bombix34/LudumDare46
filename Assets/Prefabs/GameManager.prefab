@@ -57,10 +57,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7435192755412720299}
     m_Modifications:
+    - target: {fileID: 1314793734, guid: 27e06727cff129345b5d949d17d17f69, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2244560606641933030, guid: 286dbf57ccfa81b499081238b984b43b,
+        type: 2}
+    - target: {fileID: 1314793734, guid: 27e06727cff129345b5d949d17d17f69, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7199850842551631524, guid: 27e06727cff129345b5d949d17d17f69,
         type: 3}
       propertyPath: Loop
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199850842551631524, guid: 27e06727cff129345b5d949d17d17f69,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2244560606641933030, guid: 286dbf57ccfa81b499081238b984b43b,
+        type: 2}
+    - target: {fileID: 7199850842551631524, guid: 27e06727cff129345b5d949d17d17f69,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7382336429360657224, guid: 27e06727cff129345b5d949d17d17f69,
         type: 3}
@@ -122,6 +142,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7382336429360657238, guid: 27e06727cff129345b5d949d17d17f69,
+        type: 3}
+      propertyPath: doubleJumpSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 1223f8eb898ad984ea39dce4c09c3fcd,
+        type: 2}
+    - target: {fileID: 7382336429360657238, guid: 27e06727cff129345b5d949d17d17f69,
+        type: 3}
+      propertyPath: plantGrowStartSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d6d242f662513a4c9d228c472723e63,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e06727cff129345b5d949d17d17f69, type: 3}
 --- !u!4 &98040927695080717 stripped

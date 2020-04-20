@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
   m_Name: jaws
   m_EditorClassIdentifier: 
-  audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
+  audioMixerGroup: {fileID: 3462626896554441207, guid: 286dbf57ccfa81b499081238b984b43b,
     type: 2}
   loop: 0
   clips:
@@ -20,8 +20,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 34cafa9bd7d2e7645a8d9e0f0bc6028b, type: 3}
   - {fileID: 8300000, guid: a42a81e7a17332744b48743ec937b02f, type: 3}
   volume:
-    minValue: 0.12785688
-    maxValue: 0.24544856
+    minValue: 0.168006
+    maxValue: 0.28559768
   pitch:
     minValue: 0.97042525
     maxValue: 1.0392522
