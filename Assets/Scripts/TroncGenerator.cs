@@ -117,7 +117,10 @@ namespace SplineMesh
 
             generated.GetComponent<MeshRenderer>().material = material;
 
-            generated.AddComponent<DecrepitEffect>();
+            if(generated.GetComponent<DecrepitEffect>()==null)
+            {
+                generated.AddComponent<DecrepitEffect>();
+            }
             meshBender = generated.GetComponent<MeshBender>();
             spline = GetComponent<Spline>();
 
