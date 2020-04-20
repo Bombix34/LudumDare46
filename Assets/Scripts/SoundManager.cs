@@ -6,14 +6,14 @@ public class SoundManager : Singleton<SoundManager>
 {
 
     public AudioSource[] audiosources;
-    public PitchVolumeAudio noteSound;                  //0
-    public PitchVolumeAudio repulsionCreate;            //1
-    public PitchVolumeAudio repulsionDestroy;           //2
-    public PitchVolumeAudio attractionCreate;            //3
-    public PitchVolumeAudio attractionDestroy;           //4
-    public PitchVolumeAudio birthPlanet;                //5
-    public PitchVolumeAudio birthStar;                   //6
-    public PitchVolumeAudio birthTrou;                  //7
+    public PitchVolumeAudio plantGrowStartSound;                  //0
+    public PitchVolumeAudio plantGrowEndSound;                      //1
+    public PitchVolumeAudio dashSound;                               //2
+    public PitchVolumeAudio jumpSound;                              //3
+    public PitchVolumeAudio filetSound;                             //4
+    public PitchVolumeAudio jumpingLeafSound;                //5
+    public PitchVolumeAudio doubleJumpSound;                   //6
+    public PitchVolumeAudio feedingSound;                  //7
 
     void Start()
     {
@@ -28,28 +28,28 @@ public class SoundManager : Singleton<SoundManager>
         switch(sound)
         {
             case 0:
-                noteSound.Play(GetAudioSourceAvailable());
+                plantGrowStartSound.Play(GetAudioSourceAvailable());
                 break;
             case 1:
-                repulsionCreate.Play(GetAudioSourceAvailable());
+                plantGrowEndSound.Play(GetAudioSourceAvailable());
                 break;
             case 2:
-                repulsionDestroy.Play(GetAudioSourceAvailable());
+                dashSound.Play(GetAudioSourceAvailable());
                 break;
             case 3:
-                attractionCreate.Play(GetAudioSourceAvailable());
+                jumpSound.Play(GetAudioSourceAvailable());
                 break;
             case 4:
-                attractionDestroy.Play(GetAudioSourceAvailable());
+                filetSound.Play(GetAudioSourceAvailable());
                 break;
             case 5:
-                birthPlanet.Play(GetAudioSourceAvailable());
+                jumpingLeafSound.Play(GetAudioSourceAvailable());
                 break;
             case 6:
-                birthStar.Play(GetAudioSourceAvailable());
+                doubleJumpSound.Play(GetAudioSourceAvailable());
                 break;
             case 7:
-                birthTrou.Play(GetAudioSourceAvailable());
+                feedingSound.Play(GetAudioSourceAvailable());
                 break;
         }
     }

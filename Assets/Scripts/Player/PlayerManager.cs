@@ -29,6 +29,7 @@ public class PlayerManager : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && !flyInHand.activeInHierarchy)
         {
+            SoundManager.Instance.PlaySound(4);
             filet.SetTrigger("Attack");
             if(GetComponentInChildren<FiletCollider>().HasFly)
             {
@@ -44,6 +45,7 @@ public class PlayerManager : MonoBehaviour
         {
             //FEED TREE
             FlyDisappearFromHand();
+            SoundManager.Instance.PlaySound(7);
             GameManager.Instance.FeedTree();
             return true;
         }
