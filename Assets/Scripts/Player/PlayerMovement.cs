@@ -32,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
 
     private GameObject lastPlatform = null;
 
+    [SerializeField]
+    private FiletCollider filetCollider;
+
     private void Awake()
     {
         controller = this.GetComponent<CharacterController>();
@@ -174,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
     {
         this.GetComponentInChildren<CameraManager>().BloomDieEffect(settings.deathBloomIntensity, settings.deathBloomDuration);
         GetComponent<PlayerManager>().FlyDisappearFromHand();
+        filetCollider.RespawnFly();
         yield return new WaitForSeconds(0.3f);
         controller.enabled = false;
         this.transform.position = position;
