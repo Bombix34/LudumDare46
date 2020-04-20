@@ -40,6 +40,8 @@ public class PlayerSettings : ScriptableObject
     public float dashVignette;
     public float dashVignetteDecreaseSpeed = 2f;
 
+    [Header("Chrono Settings")]
+    public float decrepitTime;
 
     [Header("Death Settings")]
     [Tooltip("La distance en Y de la death zone")]
