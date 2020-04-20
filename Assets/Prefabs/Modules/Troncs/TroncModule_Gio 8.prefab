@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialOk: {fileID: 0}
   materialNotOk: {fileID: 0}
+  dissolveMaterial: {fileID: 0}
 --- !u!1 &9159671208030506395
 GameObject:
   m_ObjectHideFlags: 0
