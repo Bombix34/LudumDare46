@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca1a85de7ca076468e134996f879d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bouncingMaterial: {fileID: 2100000, guid: 499d2705263703d4aab26fb374de0623, type: 2}
 --- !u!114 &-7006875084441556401
 MonoBehaviour:
   m_ObjectHideFlags: 0
