@@ -46,6 +46,7 @@ public class FiletCollider : MonoBehaviour
         {
             flyCatchs[i].SetActive(true);
         }
+        curFly = null;
         flyCatchs.Clear();
     }
 

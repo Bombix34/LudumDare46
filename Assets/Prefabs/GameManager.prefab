@@ -148,6 +148,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 1223f8eb898ad984ea39dce4c09c3fcd,
         type: 2}
+    - target: {fileID: 7382336429360657238, guid: 27e06727cff129345b5d949d17d17f69,
+        type: 3}
+      propertyPath: plantGrowStartSound
+      value: 
+      objectReference: {fileID: 11400000, guid: 2d6d242f662513a4c9d228c472723e63,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e06727cff129345b5d949d17d17f69, type: 3}
 --- !u!4 &98040927695080717 stripped

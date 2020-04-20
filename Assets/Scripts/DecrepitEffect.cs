@@ -32,6 +32,7 @@ public class DecrepitEffect : MonoBehaviour
     {
         if(GameManager.Instance.currentLife>0)
         {
+            rend.material = materialOk;
             rend.material.Lerp(materialNotOk, materialOk, GameManager.Instance.currentLife/decrepitTotalTime);
         }
         else

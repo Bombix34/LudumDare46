@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace SplineMesh
@@ -47,29 +46,6 @@ namespace SplineMesh
             Init();
         }
 
-        private void OnEnable()
-        {
-            rate = 0;
-            growAfterSize = 1f;
-            IsEndedGrowing = false;
-            Init();
-#if UNITY_EDITOR
-            EditorApplication.update += EditorUpdate;
-#endif
-        }
-
-        void OnDisable()
-        {
-#if UNITY_EDITOR
-            EditorApplication.update -= EditorUpdate;
-#endif
-        }
-
-        private void OnValidate()
-        {
-            Init();
-        }
-
         private void Update()
         {
             if (IsEndedGrowing)
@@ -85,25 +61,6 @@ namespace SplineMesh
                 {
                     IsEndedGrowing = true;
                     SoundManager.Instance.PlaySound(1);
-                }
-            }
-            Contort();
-        }
-
-        void EditorUpdate()
-        {
-            if (IsEndedGrowing)
-            {
-                return;
-            }
-            rate += Time.deltaTime / DurationInSecond;
-            if (rate > 1)
-            {
-                if (growAfterSize < 8f)
-                    growAfterSize += (Time.deltaTime * growAfterSizeSpeed);
-                else
-                {
-                    IsEndedGrowing = true;
                 }
             }
             Contort();
