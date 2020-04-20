@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         deathZone = DeathTriggerZone.Instance;
+        deathZone.Player = this.gameObject;
     }
 
     private void Update()
@@ -142,6 +143,11 @@ public class PlayerMovement : MonoBehaviour
         if (hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform && IsGrounded)
         {
             lastPlatform = hit.gameObject;
+            deathZone?.SwitchPosition();
+        }
+        else if(hit.transform.parent!=null && hit.transform.parent.CompareTag("Ground") && hit.transform.parent.gameObject!=lastPlatform && IsGrounded)
+        {
+            lastPlatform = hit.transform.parent.gameObject;
             deathZone?.SwitchPosition();
         }
     }
