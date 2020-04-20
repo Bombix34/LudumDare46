@@ -143,6 +143,11 @@ public class PlayerMovement : MonoBehaviour
             Bounce(hit.gameObject.GetComponent<BouncingPlatform>().BounceDirection);
             return;
         }
+        else if(hit.transform.parent!=null && hit.transform.parent.GetComponent<BouncingPlatform>()!=null)
+        {
+            Bounce(hit.transform.parent.GetComponent<BouncingPlatform>().BounceDirection);
+            return;
+        }
         if (hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform && IsGrounded)
         {
             lastPlatform = hit.gameObject;
