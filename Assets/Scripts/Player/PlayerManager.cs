@@ -29,10 +29,12 @@ public class PlayerManager : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire1") && !flyInHand.activeInHierarchy)
         {
+            SoundManager.Instance.PlaySound(4);
             filet.SetTrigger("Attack");
             if(GetComponentInChildren<FiletCollider>().HasFly)
             {
                 IsCatching = true;
+                GetComponentInChildren<FiletCollider>().DestroyFly();
                 StartCoroutine(CatchFly());
             }
         }
@@ -44,6 +46,7 @@ public class PlayerManager : MonoBehaviour
         {
             //FEED TREE
             FlyDisappearFromHand();
+            SoundManager.Instance.PlaySound(7);
             GameManager.Instance.FeedTree();
             return true;
         }
@@ -69,9 +72,7 @@ public class PlayerManager : MonoBehaviour
 
     private IEnumerator CatchFly()
     {
-        yield return new WaitForSeconds(0.2f);
-        GetComponentInChildren<FiletCollider>().DestroyFly();
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.3f);
         FlyAppearInHand();
         IsCatching = false;
     }
