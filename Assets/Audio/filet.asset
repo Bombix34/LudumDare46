@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
+  m_Name: filet
+  m_EditorClassIdentifier: 
+  audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
+    type: 2}
+  loop: 0
+  clips:
+  - {fileID: 8300000, guid: 9731abb3128a7f142ab0dbee59e12388, type: 3}
+  - {fileID: 8300000, guid: be137a4909d0bd0488d21d18a9eb6acb, type: 3}
+  - {fileID: 8300000, guid: 97c9b4fa263b56646940e80d99867ab8, type: 3}
+  - {fileID: 8300000, guid: a4dea11b2b57a114f98203b26ae86712, type: 3}
+  - {fileID: 8300000, guid: 25831d91f9e07ce48979be730ff6f7b0, type: 3}
+  - {fileID: 8300000, guid: 220526f79999c3a48bec8f78b6c79a4d, type: 3}
+  volume:
+    minValue: 0.23683307
+    maxValue: 0.35442472
+  pitch:
+    minValue: 0.97042525
+    maxValue: 1.0392522

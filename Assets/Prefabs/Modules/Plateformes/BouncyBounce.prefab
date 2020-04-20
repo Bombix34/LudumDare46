@@ -232,8 +232,9 @@ GameObject:
   - component: {fileID: 7690439135922731224}
   - component: {fileID: 172768849778519895}
   - component: {fileID: 8583392965476406774}
+  - component: {fileID: 8964416411287577823}
   m_Layer: 9
-  m_Name: LeafPlatform_03 1
+  m_Name: BouncyBounce
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,3 +320,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chrono: 3
   appearSpeed: 1
+--- !u!114 &8964416411287577823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690439135922731230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ca1a85de7ca076468e134996f879d7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bouncingMaterial: {fileID: 2100000, guid: b8c5ad2d83a7ebd4e929fb956ad5011f, type: 2}

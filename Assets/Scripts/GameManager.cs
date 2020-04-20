@@ -6,12 +6,15 @@ using DG.Tweening;
 public class GameManager : Singleton<GameManager>
 {
     public List<GameObject> modulesInOrder;
+    public Material dissolveMaterial;
     public Material okMaterial;
     public Material notOkMaterial;
 
     public PlayerSettings settings;
 
     private int curIndexModule = -1;
+
+    private bool isDead;
 
     [Range(0f,100f)]
     public float currentLife = 100f;
@@ -37,6 +40,10 @@ public class GameManager : Singleton<GameManager>
     {
         currentLife -= Time.deltaTime;
         GameUIManager.Instance.UpdateTreeLifeUI(currentLife / settings.decrepitTime);
+        if (currentLife<=0)
+        {
+            isDead = true;
+        }
     }
 
     public void FeedTree()
