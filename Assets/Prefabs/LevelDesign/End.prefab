@@ -129,22 +129,22 @@ PrefabInstance:
     - target: {fileID: 7872208422309490619, guid: bbc41efb6ffdc5548bb7459074c537dc,
         type: 3}
       propertyPath: nodes.Array.data[0].scale.x
-      value: 0.5024286
+      value: 0.5121582
       objectReference: {fileID: 0}
     - target: {fileID: 7872208422309490619, guid: bbc41efb6ffdc5548bb7459074c537dc,
         type: 3}
       propertyPath: nodes.Array.data[0].scale.y
-      value: 0.5024286
+      value: 0.5121582
       objectReference: {fileID: 0}
     - target: {fileID: 7872208422309490619, guid: bbc41efb6ffdc5548bb7459074c537dc,
         type: 3}
       propertyPath: curves.Array.data[0].n1.scale.x
-      value: 0.5024286
+      value: 0.5121582
       objectReference: {fileID: 0}
     - target: {fileID: 7872208422309490619, guid: bbc41efb6ffdc5548bb7459074c537dc,
         type: 3}
       propertyPath: curves.Array.data[0].n1.scale.y
-      value: 0.5024286
+      value: 0.5121582
       objectReference: {fileID: 0}
     - target: {fileID: 8003229295808903011, guid: bbc41efb6ffdc5548bb7459074c537dc,
         type: 3}
