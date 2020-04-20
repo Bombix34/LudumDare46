@@ -31,7 +31,6 @@ public class FiletCollider : MonoBehaviour
     {
         flyCatchs.Add(curFly);
         curFly.SetActive(false);
-        //Destroy(curFly);
     }
 
     public void RespawnFly()
