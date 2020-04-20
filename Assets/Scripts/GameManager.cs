@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -35,15 +36,17 @@ public class GameManager : Singleton<GameManager>
     private void Update()
     {
         currentLife -= Time.deltaTime;
+        GameUIManager.Instance.UpdateTreeLifeUI(currentLife / settings.decrepitTime);
     }
 
     public void FeedTree()
     {
-        currentLife += (settings.decrepitTime*0.5f);
-        if(currentLife>settings.decrepitTime)
+        float curLife = currentLife+(settings.decrepitTime * 0.5f);
+        if (curLife > settings.decrepitTime)
         {
-            currentLife = settings.decrepitTime;
+            curLife = settings.decrepitTime;
         }
+        DOTween.To(() => currentLife, x => currentLife = x, curLife, 0.3f);
     }
 
     public void LoadNextModule()

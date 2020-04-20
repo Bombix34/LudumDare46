@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb9ee7f1371aa8b44bdfa648a2b4d366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modulesInOrder: []
   okMaterial: {fileID: 2100000, guid: bf2714ea2c95cca469a774f1e8ea668b, type: 2}
   notOkMaterial: {fileID: 2100000, guid: f4484317e2937774291aead4a8b5d64f, type: 2}
   settings: {fileID: 11400000, guid: 6f7618fe38ee4d14ba02b781ad4febda, type: 2}
