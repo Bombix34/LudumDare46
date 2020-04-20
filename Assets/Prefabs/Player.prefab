@@ -1280,6 +1280,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 512
+  filetCollider: {fileID: 1540803428}
 --- !u!114 &86150057
 MonoBehaviour:
   m_ObjectHideFlags: 0
