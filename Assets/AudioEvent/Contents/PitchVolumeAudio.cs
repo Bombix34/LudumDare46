@@ -26,4 +26,8 @@ public class PitchVolumeAudio : AudioEvent {
             source.PlayOneShot(toPlay);
         }
     }
+
+    public void Stop()
+    {
+    }
 }

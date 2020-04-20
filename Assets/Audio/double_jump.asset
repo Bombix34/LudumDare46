@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
-  m_Name: amb
+  m_Name: double_jump
   m_EditorClassIdentifier: 
   audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
     type: 2}
   loop: 0
   clips:
-  - {fileID: 8300000, guid: 1eb96ec2afae2924d9ac3b45611f775d, type: 3}
+  - {fileID: 8300000, guid: 2cc45545a08547e47abaadb6eff64794, type: 3}
   volume:
-    minValue: 0.6039108
-    maxValue: 0.7215025
+    minValue: 0.5071136
+    maxValue: 0.5902918
   pitch:
-    minValue: 0.97042525
-    maxValue: 1.0392522
+    minValue: 1.0937772
+    maxValue: 1.2773157

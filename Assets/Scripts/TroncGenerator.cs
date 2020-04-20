@@ -15,7 +15,7 @@ namespace SplineMesh
     /// 
     /// This component is only for demo purpose and is not intended to be used as-is.
     /// </summary>
-    [ExecuteInEditMode]
+   // [ExecuteInEditMode]
     [RequireComponent(typeof(Spline))]
     public class TroncGenerator : MonoBehaviour
     {
@@ -37,6 +37,15 @@ namespace SplineMesh
         public float growAfterSizeSpeed = 1f;
 
         public bool IsEndedGrowing { get; set; } = false;
+
+        private void Start()
+        {
+            rate = 0;
+            growAfterSize = 1f;
+            IsEndedGrowing = false;
+            SoundManager.Instance.PlaySound(0);
+            Init();
+        }
 
         private void OnEnable()
         {
@@ -61,6 +70,26 @@ namespace SplineMesh
             Init();
         }
 
+        private void Update()
+        {
+            if (IsEndedGrowing)
+            {
+                return;
+            }
+            rate += Time.deltaTime / DurationInSecond;
+            if (rate > 1)
+            {
+                if (growAfterSize < 8f)
+                    growAfterSize += (Time.deltaTime * growAfterSizeSpeed);
+                else
+                {
+                    IsEndedGrowing = true;
+                    SoundManager.Instance.PlaySound(1);
+                }
+            }
+            Contort();
+        }
+
         void EditorUpdate()
         {
             if (IsEndedGrowing)
@@ -73,7 +102,9 @@ namespace SplineMesh
                 if (growAfterSize < 8f)
                     growAfterSize += (Time.deltaTime * growAfterSizeSpeed);
                 else
+                {
                     IsEndedGrowing = true;
+                }
             }
             Contort();
         }
