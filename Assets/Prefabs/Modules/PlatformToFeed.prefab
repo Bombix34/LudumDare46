@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439859120111004634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 158, z: 204}
+  m_LocalPosition: {x: -34, y: 158, z: 204}
   m_LocalScale: {x: 704.05, y: 234.5, z: 284.5}
   m_Children: []
   m_Father: {fileID: 6927854240120039977}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 439859120525677525}
   m_Layer: 9
   m_Name: Collider (1)
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 439859121457808845}
   m_Layer: 9
   m_Name: Collider
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,9 +327,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6927854240120039977}
   - component: {fileID: 5793114472873544725}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlatformToFeed
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

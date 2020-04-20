@@ -7,6 +7,8 @@ public class PlayerSettings : ScriptableObject
 {
     [Header("View Settings")]
     public float mouseSensitivity = 100f;
+    [Range(0f, 1f)]
+    public float cursorOpacity = 0.4f;
 
     [Header("Movement Settings")]
     public float speed = 12f;
@@ -40,6 +42,8 @@ public class PlayerSettings : ScriptableObject
     public float dashVignette;
     public float dashVignetteDecreaseSpeed = 2f;
 
+    [Header("Chrono Settings")]
+    public float decrepitTime;
 
     [Header("Death Settings")]
     [Tooltip("La distance en Y de la death zone")]
