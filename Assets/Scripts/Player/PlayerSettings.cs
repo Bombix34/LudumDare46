@@ -7,6 +7,8 @@ public class PlayerSettings : ScriptableObject
 {
     [Header("View Settings")]
     public float mouseSensitivity = 100f;
+    [Range(0f, 1f)]
+    public float cursorOpacity = 0.4f;
 
     [Header("Movement Settings")]
     public float speed = 12f;

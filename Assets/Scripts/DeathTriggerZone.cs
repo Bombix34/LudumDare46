@@ -6,6 +6,10 @@ public class DeathTriggerZone :Singleton<DeathTriggerZone>
 {
     [SerializeField]
     private GameObject player;
+    public GameObject Player
+    {
+        set => player = value;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +23,7 @@ public class DeathTriggerZone :Singleton<DeathTriggerZone>
 
     public void SwitchPosition()
     {
+        print("switch");
         float yDisplacement = player.GetComponent<PlayerMovement>().Settings.deathTriggerZonePositionY;
         Vector3 finalPosition = new Vector3(player.transform.position.x, player.transform.position.y + yDisplacement, player.transform.position.z);
         this.transform.position = finalPosition;

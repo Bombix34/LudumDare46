@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Player Settings
   m_EditorClassIdentifier: 
   mouseSensitivity: 120
+  cursorOpacity: 0.55
   speed: 12
   gravity: -25
   jumpHeight: 4
