@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cf35d8fc3f884871bba8933d5b9d6cd, type: 3}
-  m_Name: DoubleJump
+  m_Name: double_jump
   m_EditorClassIdentifier: 
   audioMixerGroup: {fileID: -2382344081316782046, guid: 8098347440f23a044a93e566830d2324,
     type: 2}
@@ -18,8 +18,8 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 2cc45545a08547e47abaadb6eff64794, type: 3}
   volume:
-    minValue: 0.6505033
-    maxValue: 0.73368144
+    minValue: 0.5071136
+    maxValue: 0.5902918
   pitch:
-    minValue: 0.9549513
-    maxValue: 1.0237782
+    minValue: 1.0937772
+    maxValue: 1.2773157
