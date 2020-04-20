@@ -100,6 +100,7 @@ public class PlayerMovement : MonoBehaviour
             IsDashing = true;
             velocity = Vector3.zero;
             curDashCooldown = settings.dashCooldown;
+            SoundManager.Instance.PlaySound(2);
             Camera.main.GetComponent<CameraManager>().ApplyFOVEffect(settings.dashFOV, settings.dashFOVDecreaseSpeed);
             Camera.main.GetComponent<CameraManager>().ApplyVignetteEffect(settings.dashVignette, settings.dashVignetteDecreaseSpeed);
             curDashOnAir++;
@@ -118,12 +119,14 @@ public class PlayerMovement : MonoBehaviour
             //first jump
             velocity = Vector3.zero;
             velocityOnJump = velocity;
+            SoundManager.Instance.PlaySound(3);
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * curGravity);
         }
         else if(Input.GetButtonDown("Jump") && curJumpOnAir<settings.multipleJumpNumber)
         {
             //multiple jump
             velocity = Vector3.zero;
+            SoundManager.Instance.PlaySound(6);
             curJumpOnAir++;
             velocity.y = Mathf.Sqrt(settings.jumpHeight * -2f * (curGravity * settings.multipleJumpHeightRatio));
         }
@@ -200,6 +203,7 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity = Vector3.zero;
         velocity.y += settings.bounceForce;
+        SoundManager.Instance.PlaySound(5);
         curJumpOnAir = 0;
         curDashOnAir = 0;
     }

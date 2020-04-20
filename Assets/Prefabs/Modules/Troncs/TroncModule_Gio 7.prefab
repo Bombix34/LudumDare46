@@ -254,3 +254,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialOk: {fileID: 0}
   materialNotOk: {fileID: 0}
+  dissolveMaterial: {fileID: 0}
