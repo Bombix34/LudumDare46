@@ -54,4 +54,9 @@ public class FiletCollider : MonoBehaviour
     {
         get => curFly != null;
     }
+
+    public bool IsGoldFly
+    {
+        get => curFly?.GetComponent<GoldFly>() != null;
+    }
 }
