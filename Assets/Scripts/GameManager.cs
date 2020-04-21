@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 
 public class GameManager : Singleton<GameManager>
@@ -16,6 +18,13 @@ public class GameManager : Singleton<GameManager>
 
     private bool isDead;
 
+    [SerializeField]
+    private GameObject endGameUI;
+
+    public bool isWinning { get; set; } = false;
+
+    private float curChrono = 0f;
+
     [Range(0f,100f)]
     public float currentLife = 100f;
 
@@ -26,6 +35,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        endGameUI.SetActive(false);
         if(modulesInOrder!=null)
         {
             for(int i =0; i < modulesInOrder.Count; ++i)
@@ -38,12 +48,24 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
+        if(isWinning)
+        {
+
+            return;
+        }
         currentLife -= Time.deltaTime;
+        curChrono += Time.deltaTime;
         GameUIManager.Instance.UpdateTreeLifeUI(currentLife / settings.decrepitTime);
         if (currentLife<=0)
         {
             isDead = true;
         }
+    }
+
+    public void Win()
+    {
+        isWinning = true;
+        endGameUI.SetActive(true);
     }
 
     public void FeedTree()

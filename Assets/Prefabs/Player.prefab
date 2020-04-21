@@ -354,6 +354,8 @@ MonoBehaviour:
   treeLifeFillColor: {fileID: 2046119014}
   colorLife: {r: 0.14901961, g: 0.5058824, b: 0.24313726, a: 0.78431374}
   colorDeath: {r: 1, g: 0.31764707, b: 0.18431373, a: 0.78431374}
+  flowerWarningImg: {fileID: 1178581533}
+  flyWarningImg: {fileID: 1301733847}
 --- !u!1 &1143952597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1503,9 +1505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyInHand: {fileID: 2654928551680919555}
   filet: {fileID: 1143952602}
-  raycastMask:
-    serializedVersion: 2
-    m_Bits: 0
+  InGameUI: {fileID: 1053060177}
+  winMaterial: {fileID: 2100000, guid: fd0f5d0b03ead7a4aa191d282c4200ea, type: 2}
 --- !u!1001 &6339342479714980106
 PrefabInstance:
   m_ObjectHideFlags: 0

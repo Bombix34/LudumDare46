@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private FiletCollider filetCollider;
 
+
     private void Awake()
     {
         controller = this.GetComponent<CharacterController>();
@@ -49,6 +50,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if(GameManager.Instance.isWinning)
+        {
+            GravityEffect();
+            return;
+        }
         DashCooldown();
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
         
@@ -161,6 +167,12 @@ public class PlayerMovement : MonoBehaviour
             lastPlatform = hit.transform.parent.gameObject;
             deathZone?.SwitchPosition();
         }
+    }
+
+    public void GravityEffect()
+    {
+        velocity.y -= settings.gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void DashCooldown()
