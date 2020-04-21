@@ -57,12 +57,10 @@ public class PlayerMovement : MonoBehaviour
         }
         DashCooldown();
         IsGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-        
         if(IsGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-        
         if(IsGrounded)
         {
             curJumpOnAir = 0;
@@ -159,11 +157,21 @@ public class PlayerMovement : MonoBehaviour
         }
         if (hit.transform.gameObject.CompareTag("Ground") && hit.gameObject!=lastPlatform && IsGrounded)
         {
+            if(GameManager.Instance.IsTreeDead)
+            {
+                Destroy(hit.gameObject);
+                return;
+            }
             lastPlatform = hit.gameObject;
             deathZone?.SwitchPosition();
         }
         else if(hit.transform.parent!=null && hit.transform.parent.CompareTag("Ground") && hit.transform.parent.gameObject!=lastPlatform && IsGrounded)
         {
+            if (GameManager.Instance.IsTreeDead)
+            {
+                Destroy(hit.transform.parent.gameObject);
+                return;
+            }
             lastPlatform = hit.transform.parent.gameObject;
             deathZone?.SwitchPosition();
         }

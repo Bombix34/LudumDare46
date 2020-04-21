@@ -23,6 +23,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField]
     private Text chronoText;
 
+    [SerializeField]
+    private GameObject gameOverUI;
+
     public bool isWinning { get; set; } = false;
 
     private float curChrono = 0f;
@@ -30,30 +33,51 @@ public class GameManager : Singleton<GameManager>
     [Range(0f,100f)]
     public float currentLife = 100f;
 
+    public bool IsGameOver { get; set; } = false;
+
     private void Awake()
     {
         currentLife = settings.decrepitTime;
+        isWinning = false;
+        IsGameOver = false;
     }
 
     private void Start()
     {
         endGameUI.SetActive(false);
-        if(modulesInOrder!=null)
+        gameOverUI.SetActive(false);
+        if (modulesInOrder!=null)
         {
             for(int i =0; i < modulesInOrder.Count; ++i)
             {
                 modulesInOrder[i].SetActive(false);
             }
-            LoadNextModule();
+            StartCoroutine(WaitForStartCoroutine());
         }
+    }
+
+    private IEnumerator WaitForStartCoroutine()
+    {
+        yield return new WaitForSeconds(1f);
+        LoadNextModule();
     }
 
     private void Update()
     {
         if(isWinning)
         {
-
             return;
+        }
+        else if(IsGameOver)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+            }
+            else if(Input.GetButtonDown("Cancel"))
+            {
+                Application.Quit();
+            }
         }
         currentLife -= Time.deltaTime;
         curChrono += Time.deltaTime;
@@ -68,6 +92,7 @@ public class GameManager : Singleton<GameManager>
     {
         isWinning = true;
         endGameUI.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
         int curMin = Mathf.FloorToInt(curChrono / 60F);
         int curSec = Mathf.FloorToInt(curChrono - curMin * 60);
         string chronoString="";
@@ -89,6 +114,14 @@ public class GameManager : Singleton<GameManager>
             chronoString += curSec;
         }
         chronoText.text =chronoString;
+    }
+
+    public void GameOver()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        IsGameOver = true;
+        gameOverUI.SetActive(true);
+        PlayerManager.Instance.GetComponent<PlayerMovement>().enabled = false;
     }
 
     public bool IsTreeDead

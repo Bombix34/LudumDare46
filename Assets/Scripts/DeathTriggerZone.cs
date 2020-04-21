@@ -19,6 +19,7 @@ public class DeathTriggerZone :Singleton<DeathTriggerZone>
             if(GameManager.Instance.IsTreeDead)
             {
                 //GAME OVER
+                GameManager.Instance.GameOver();
             }
             else
             {
