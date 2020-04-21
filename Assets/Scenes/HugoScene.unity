@@ -1337,7 +1337,7 @@ Transform:
   m_LocalScale: {x: 3.89, y: 9.46, z: 2.78}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &992102846
 Mesh:
@@ -2822,7 +2822,7 @@ Transform:
   m_LocalScale: {x: 3.89, y: 9.46, z: 2.78}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2147422033
 PrefabInstance:
@@ -2938,7 +2938,7 @@ PrefabInstance:
     - target: {fileID: 1155536490163635713, guid: 697a151f2a3ca924d80a7e8259e18ef4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1155536490163635713, guid: 697a151f2a3ca924d80a7e8259e18ef4,
         type: 3}
@@ -3232,7 +3232,7 @@ PrefabInstance:
     - target: {fileID: 7254160105145341682, guid: 271a41da9af8606468c7f56c035743b5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7254160105145341682, guid: 271a41da9af8606468c7f56c035743b5,
         type: 3}

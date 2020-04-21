@@ -20,6 +20,8 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField]
     private GameObject endGameUI;
+    [SerializeField]
+    private Text chronoText;
 
     public bool isWinning { get; set; } = false;
 
@@ -66,6 +68,27 @@ public class GameManager : Singleton<GameManager>
     {
         isWinning = true;
         endGameUI.SetActive(true);
+        int curMin = Mathf.FloorToInt(curChrono / 60F);
+        int curSec = Mathf.FloorToInt(curChrono - curMin * 60);
+        string chronoString="";
+        if(curMin<10)
+        {
+            chronoString += "0" + curMin;
+        }
+        else
+        {
+            chronoString += curMin;
+        }
+        chronoString += " ";
+        if(curSec<10)
+        {
+            chronoString += "0" + curSec;
+        }
+        else
+        {
+            chronoString += curSec;
+        }
+        chronoText.text =chronoString;
     }
 
     public void FeedTree()
