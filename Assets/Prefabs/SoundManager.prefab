@@ -1746,7 +1746,7 @@ MonoBehaviour:
   jumpSound: {fileID: 11400000, guid: c7a513d26d447cc4b8b660fd734f2753, type: 2}
   filetSound: {fileID: 11400000, guid: 0c90dca9ae7079b469f38dd1f8e56de0, type: 2}
   jumpingLeafSound: {fileID: 11400000, guid: 1f0a1218f26b15a4b915d50957ad50d5, type: 2}
-  doubleJumpSound: {fileID: 11400000, guid: ee5201e491b5f3a43b7975831fae5c50, type: 2}
+  doubleJumpSound: {fileID: 11400000, guid: 1223f8eb898ad984ea39dce4c09c3fcd, type: 2}
   feedingSound: {fileID: 11400000, guid: 453f5c06cbac6ab4b986ab84a2681345, type: 2}
 --- !u!82 &1314793734
 AudioSource:
@@ -1757,8 +1757,7 @@ AudioSource:
   m_GameObject: {fileID: 7382336429360657224}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6132300472182627241, guid: 8098347440f23a044a93e566830d2324,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b8ddd67db11d57447aa97ad3ed16f2eb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.581
@@ -1854,8 +1853,7 @@ AudioSource:
   m_GameObject: {fileID: 7382336429360657224}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 6132300472182627241, guid: 8098347440f23a044a93e566830d2324,
-    type: 2}
+  OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1eb96ec2afae2924d9ac3b45611f775d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.431
