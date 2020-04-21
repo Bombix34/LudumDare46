@@ -44,6 +44,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        Cursor.visible = false;
         endGameUI.SetActive(false);
         gameOverUI.SetActive(false);
         if (modulesInOrder!=null)
