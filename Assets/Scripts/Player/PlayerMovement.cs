@@ -138,10 +138,13 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity += velocityOnJump;
         }
+        if(!isFlyMode)
         velocity.y += curGravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public bool isFlyMode=false;
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {

@@ -9,7 +9,7 @@ public class TriggerNextModule : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             GameManager.Instance.LoadNextModule();
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
