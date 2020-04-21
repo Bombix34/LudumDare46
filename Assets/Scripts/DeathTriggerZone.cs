@@ -16,7 +16,14 @@ public class DeathTriggerZone :Singleton<DeathTriggerZone>
         if(other.gameObject == player)
         {
             //death trigger
-            other.gameObject.GetComponent<CheckpointManager>().Respawn();
+            if(GameManager.Instance.IsTreeDead)
+            {
+                //GAME OVER
+            }
+            else
+            {
+                other.gameObject.GetComponent<CheckpointManager>().Respawn();
+            }
 
         }
     }
