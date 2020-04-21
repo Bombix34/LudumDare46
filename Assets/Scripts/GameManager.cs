@@ -91,6 +91,11 @@ public class GameManager : Singleton<GameManager>
         chronoText.text =chronoString;
     }
 
+    public bool IsTreeDead
+    {
+        get => (currentLife / settings.decrepitTime)<=0;
+    }
+
     public void FeedTree()
     {
         float curLife = currentLife+(settings.decrepitTime * 0.5f);
